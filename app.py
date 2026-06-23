@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 
-# Sayfa Ayarları (Mobil Öncelikli Şık Tasarım)
+# Sayfa Ayarları
 st.set_page_config(
     page_title="Snorb Coffee - Dijital Menü", 
     page_icon="☕", 
@@ -11,10 +11,8 @@ st.set_page_config(
 # -------------------------------------------------------------------------
 # 🎨 1. ARKA PLAN RENGİ VE LİNKLER
 # -------------------------------------------------------------------------
-ARKA_PLAN_RENGI = "#ffe4c3"  # Sıcak şeftali/krem tonu
+ARKA_PLAN_RENGI = "#ffe4c3"  
 
-# Logonun arka planını bu renge boyayıp ya da şeffaf yapıp yüklediğinde 
-# adı neyse buraya onu yaz (Örn: logo.png veya logo.jpg)
 LOGO_DOSYA_ADI = "Snorb_Coffee_Dikey_Logo_Yesil.png" 
 
 MENU_URL = "https://drive.google.com/file/d/1K4G8IqbEMC9MLgpQaunTz0BEZhGSXf6k/view?usp=sharing"
@@ -22,21 +20,36 @@ YORUM_URL = "https://share.google/0hW6Q4o13PHapIV3M"
 INSTAGRAM_URL = "https://www.instagram.com/snorbcoffee/"
 # -------------------------------------------------------------------------
 
-# Arka plan rengini tüm siteye giydiren saf CSS kodu
+# CRITICAL FIX: GitHub logosunu, sağ alttaki yazıları ve üst barı tamamen gizleyen CSS
 st.markdown(f"""
     <style>
+    /* Tüm sitenin arka planı */
     .stApp {{
         background-color: {ARKA_PLAN_RENGI} !important;
     }}
+    /* Çizgi rengi */
     hr {{
         border-top: 1px solid #e6cbab !important;
+    }}
+    /* Sağ üstteki GitHub ve Streamlit Menüsünü Gizle */
+    #MainMenu {{visibility: hidden;}}
+    header {{visibility: hidden;}}
+    footer {{visibility: hidden;}}
+    stDecoration {{display:none;}}
+    
+    /* Mobil cihazlarda üstteki boşluğu sıfırlamak için ek temizlik */
+    .stAppHeader {{
+        display: none !important;
+    }}
+    .stMainBlockContainer {{
+        padding-top: 2rem !important;
     }}
     </style>
 """, unsafe_allow_html=True)
 
 
 # =========================================================================
-# 📱 MÜŞTERİ EKRANI (SAFI KAFE SİTESİ)
+# 📱 MÜŞTERİ EKRANI (TAMAMEN SADELEŞTİRİLMİŞ)
 # =========================================================================
 
 # --- LOGO ALANI ---
@@ -46,7 +59,6 @@ else:
     st.markdown("<div style='text-align:center; font-size:50px;'>☕</div>", unsafe_allow_html=True)
 
 # --- ARA ÇİZGİ ---
-# "DİJİTAL MENÜ" yazısı tamamen kaldırıldı, sadece butonlar öncesi şık bir üst boşluk ve çizgi bırakıldı
 st.markdown("""
     <div style='margin-top: 15px;'></div>
     <hr style='margin-bottom: 30px;'>
