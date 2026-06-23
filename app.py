@@ -16,7 +16,7 @@ ARKA_PLAN_RENGI = "#ffe4c3"
 LOGO_DOSYA_ADI = "Snorb_Coffee_Dikey_Logo_Yesil.png" 
 
 MENU_URL = "https://drive.google.com/file/d/1K4G8IqbEMC9MLgpQaunTz0BEZhGSXf6k/view?usp=sharing"
-YORUM_URL = "https://share.google/0hW6Q4o13PHapIV3M"
+YORUM_URL = "https://g.page/r/CQ5QSlJNiURdEAE/review"
 INSTAGRAM_URL = "https://www.instagram.com/snorbcoffee/"
 # -------------------------------------------------------------------------
 
