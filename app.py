@@ -14,7 +14,7 @@ st.set_page_config(
 ARKA_PLAN_RENGI = "#f2ede0"  # Snorb Coffee Özel Krem/Bej Arka Planı
 
 # GitHub'a yüklediğin logonun tam adı
-LOGO_DOSYA_ADI = "Snorb_Coffee_Dikey_Logo_Yesil.pdf" 
+LOGO_DOSYA_ADI = "logo.png" 
 
 # Senin hazırladığın güncel kurumsal linkler
 MENU_URL = "https://drive.google.com/file/d/1K4G8IqbEMC9MLgpQaunTz0BEZhGSXf6k/view?usp=sharing"
