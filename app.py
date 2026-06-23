@@ -39,19 +39,16 @@ st.markdown(f"""
 # 📱 MÜŞTERİ EKRANI (SAFI KAFE SİTESİ)
 # =========================================================================
 
-# --- LOGO ALANI (BOYUTU ARTTIRILDI) ---
-# Sütun kısıtlamasını kaldırıp logoyu doğrudan ekrana bastık, böylece alanı daha büyük kaplayacak
+# --- LOGO ALANI ---
 if os.path.exists(LOGO_DOSYA_ADI):
     st.image(LOGO_DOSYA_ADI, use_container_width=True)
 else:
     st.markdown("<div style='text-align:center; font-size:50px;'>☕</div>", unsafe_allow_html=True)
 
-# --- BAŞLIK ALANI (EKSTRA YAZI KALDIRILDI) ---
-# Alttaki büyük "Snorb Coffee" yazısı silindi, sadece şık bir alt başlık ve çizgi bırakıldı
+# --- ARA ÇİZGİ ---
+# "DİJİTAL MENÜ" yazısı tamamen kaldırıldı, sadece butonlar öncesi şık bir üst boşluk ve çizgi bırakıldı
 st.markdown("""
-    <div style='text-align: center; margin-top: 10px; margin-bottom: 15px;'>
-        <p style='color: #614a3e; font-size: 16px; font-weight: 600; letter-spacing: 0.5px;'>DİJİTAL MENÜ</p>
-    </div>
+    <div style='margin-top: 15px;'></div>
     <hr style='margin-bottom: 30px;'>
 """, unsafe_allow_html=True)
 
