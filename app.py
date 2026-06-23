@@ -9,13 +9,13 @@ st.set_page_config(
 )
 
 # -------------------------------------------------------------------------
-# 🎨 1. ARKA PLAN RENGİ VE LİNKLER (Yeni Renk Kodu Tanımlandı)
+# 🎨 1. ARKA PLAN RENGİ VE LİNKLER
 # -------------------------------------------------------------------------
-ARKA_PLAN_RENGI = "#ffe4c3"  # Yeni verdiğin sıcak şeftali/krem tonu
+ARKA_PLAN_RENGI = "#ffe4c3"  # Sıcak şeftali/krem tonu
 
 # Logonun arka planını bu renge boyayıp ya da şeffaf yapıp yüklediğinde 
 # adı neyse buraya onu yaz (Örn: logo.png veya logo.jpg)
-LOGO_DOSYA_ADI = "Snorb_Coffee_Dikey_Logo_Yesil.png" 
+LOGO_DOSYA_ADI = "Snorb_Coffee_Dikey_Logo_Yesil.pdf" 
 
 MENU_URL = "https://drive.google.com/file/d/1K4G8IqbEMC9MLgpQaunTz0BEZhGSXf6k/view?usp=sharing"
 YORUM_URL = "https://share.google/0hW6Q4o13PHapIV3M"
@@ -29,31 +29,28 @@ st.markdown(f"""
         background-color: {ARKA_PLAN_RENGI} !important;
     }}
     hr {{
-        border-top: 1px solid #e6cbab !important; /* Çizgi rengi yeni arka plana uyarlandı */
+        border-top: 1px solid #e6cbab !important;
     }}
     </style>
 """, unsafe_allow_html=True)
 
 
 # =========================================================================
-# 📱 MÜŞTERI EKRANI (SAFI KAFE SİTESİ)
+# 📱 MÜŞTERİ EKRANI (SAFI KAFE SİTESİ)
 # =========================================================================
 
-# Üst Logo Alanı
-col1, col2, col3 = st.columns([1, 2, 1])
-with col2:
-    if os.path.exists(LOGO_DOSYA_ADI):
-        st.image(LOGO_DOSYA_ADI, use_container_width=True)
-    else:
-        st.markdown("<div style='text-align:center; font-size:40px;'>☕</div>", unsafe_allow_html=True)
+# --- LOGO ALANI (BOYUTU ARTTIRILDI) ---
+# Sütun kısıtlamasını kaldırıp logoyu doğrudan ekrana bastık, böylece alanı daha büyük kaplayacak
+if os.path.exists(LOGO_DOSYA_ADI):
+    st.image(LOGO_DOSYA_ADI, use_container_width=True)
+else:
+    st.markdown("<div style='text-align:center; font-size:50px;'>☕</div>", unsafe_allow_html=True)
 
-# Başlık Alanı
+# --- BAŞLIK ALANI (EKSTRA YAZI KALDIRILDI) ---
+# Alttaki büyük "Snorb Coffee" yazısı silindi, sadece şık bir alt başlık ve çizgi bırakıldı
 st.markdown("""
-    <div style='text-align: center; margin-top: 5px; margin-bottom: 20px;'>
-        <h1 style='color: #2c1a12; font-family: "Helvetica Neue", sans-serif; font-size: 30px; font-weight: 800; letter-spacing: -0.5px;'>
-            Snorb Coffee
-        </h1>
-        <p style='color: #614a3e; font-size: 15px; font-weight: 500;'>Dijital Menü</p>
+    <div style='text-align: center; margin-top: 10px; margin-bottom: 15px;'>
+        <p style='color: #614a3e; font-size: 16px; font-weight: 600; letter-spacing: 0.5px;'>DİJİTAL MENÜ</p>
     </div>
     <hr style='margin-bottom: 30px;'>
 """, unsafe_allow_html=True)
