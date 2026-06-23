@@ -15,7 +15,7 @@ ARKA_PLAN_RENGI = "#ffe4c3"  # Sıcak şeftali/krem tonu
 
 # Logonun arka planını bu renge boyayıp ya da şeffaf yapıp yüklediğinde 
 # adı neyse buraya onu yaz (Örn: logo.png veya logo.jpg)
-LOGO_DOSYA_ADI = "Snorb_Coffee_Dikey_Logo_Yesil.pdf" 
+LOGO_DOSYA_ADI = "Snorb_Coffee_Dikey_Logo_Yesil.png" 
 
 MENU_URL = "https://drive.google.com/file/d/1K4G8IqbEMC9MLgpQaunTz0BEZhGSXf6k/view?usp=sharing"
 YORUM_URL = "https://share.google/0hW6Q4o13PHapIV3M"
